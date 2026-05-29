@@ -49,3 +49,59 @@
     grid-template-columns: 1fr;
   }
 }
+
+/*
+ * Override styling for the logo and hero image.
+ * The default styles display the logo text and a large hero image that
+ * overwhelms the page. Define specific sizing for the logo
+ * and constrain the hero graphic so that it scales gracefully
+ * on desktop and mobile screens. These rules use flexbox to
+ * center the hero bottle, set maximum widths, and adjust sizes
+ * responsively.
+ */
+
+/* Style the brand link when it contains an image logo */
+.logo-brand {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.logo-brand img {
+  height: 54px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .logo-brand img {
+    height: 40px;
+  }
+}
+
+/* Constrain the hero bottle graphic */
+.bottle-stage {
+  /* Override previous grid styles with flex layout to center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Limit the width so the hero doesn’t fill the entire viewport */
+  max-width: 900px;
+  margin: 0 auto;
+  /* Retain the minimum height from earlier declarations */
+  min-height: 390px;
+}
+
+.bottle-stage img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  .bottle-stage img {
+    max-width: 80%;
+  }
+}
+
