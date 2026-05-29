@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>H2Yo! | Feel-Good Water Campaigns</title>
   <meta name="description" content="H2Yo! creates custom bottled water campaigns with positive QR experiences, lead capture, and follow-up tools for businesses, nonprofits, teams, clubs, and events." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <header class="topbar">
-   <a class="brand logo-brand" href="#top" aria-label="H2Yo home">
-  <img src="assets/h2yo-logo.png" alt="H2Yo!" />
-</a>
+    <a class="brand logo-brand" href="#top" aria-label="H2Yo home">
+      <img src="assets/h2yo-logo.png" alt="H2Yo!" />
+    </a>
     <nav>
       <a href="#how">How it works</a>
       <a href="#yo">Meet Yo</a>
@@ -37,21 +37,46 @@
           <a class="button secondary" href="#sample-experience">See the scan experience</a>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="bottle-stage">
-          <img src="assets/h2yo-sugar-free.png" alt="Sample H2Yo custom label" onerror="this.style.display='none'" />
-          <div class="mock-bottle">
-            <span class="cap"></span>
-            <strong>H2Yo!</strong>
-            <small>Good for Yo Body.<br/>Good for Yo Mind.</small>
-            <div class="mock-qr">QR</div>
-            <em>Scan for a smile</em>
-          </div>
+      <div class="hero-card hero-samples-card">
+        <div class="sample-rotator" aria-label="Rotating H2Yo sample bottle designs">
+          <img class="rotator-img is-active" src="assets/h2yo-fat-free.png" alt="H2Yo Fat Free sample bottle" />
+          <img class="rotator-img" src="assets/h2yo-sugar-free.png" alt="H2Yo Sugar Free sample bottle" />
+          <img class="rotator-img" src="assets/h2yo-glutten-free.png" alt="H2Yo Gluten Free sample bottle" />
         </div>
         <div class="mini-card">
           <strong>Recipient scans.</strong>
           <span>They get a positive message, a fun moment, or an offer — then your campaign gets the lead, donation, signup, or brand engagement.</span>
         </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="samples">
+      <div class="section-head">
+        <p class="eyebrow">Sample campaigns</p>
+        <h2>Every bottle can carry a message, a smile, and a reason to scan.</h2>
+      </div>
+      <div class="sample-gallery">
+        <article>
+          <img src="assets/h2yo-fat-free.png" alt="H2Yo Fat Free bottle sample" />
+          <h3>Good for Yo Body</h3>
+          <p>A feel-good giveaway that hydrates the person receiving it and starts a positive brand moment.</p>
+        </article>
+        <article>
+          <img src="assets/h2yo-sugar-free.png" alt="H2Yo Sugar Free bottle sample" />
+          <h3>Good for Yo Mind</h3>
+          <p>The QR scan can deliver a positive message, surprise, fortune, download, offer, or entry form.</p>
+        </article>
+        <article>
+          <img src="assets/h2yo-glutten-free.png" alt="H2Yo Gluten Free bottle sample" />
+          <h3>Good for Yo Spirit</h3>
+          <p>Encouragement first. Action second. The campaign starts with goodwill before the ask.</p>
+        </article>
+        <article class="wide-sample">
+          <img src="assets/smsl2.jpeg" alt="Custom H2Yo nonprofit campaign sample" />
+          <h3>Fully Custom Campaign Bottles</h3>
+          <p>For nonprofits, churches, teams, clubs, fundraisers, sponsors, events, and businesses that want a branded QR-powered campaign experience.</p>
+        </article>
       </div>
     </section>
 
@@ -126,15 +151,18 @@
         <div>
           <p class="eyebrow">Meet Yo</p>
           <h2>Yo is the H2Yo! Concierge.</h2>
-          <p>Yo is cool, practical, and focused on making yo promotion work. He does not ask clients to guess scan rates or conversion rates. Yo uses their campaign facts, benchmark assumptions, and eventually H2Yo! historical campaign data to guide the next step.</p>
+          <p>Yo is committed, cool, confident, and cordial — focused on helping every client get the best ROI possible. He does not ask clients to guess scan rates or conversion rates. Yo uses campaign facts, benchmark assumptions, and eventually H2Yo! historical campaign data to guide the next best step.</p>
           <div class="quote">“Yo. Tell me what you’re promoting. I’ll help you see what makes people scan, what could hold the campaign back, and how many bottles make sense.”</div>
         </div>
-        <div class="yo-avatar" aria-label="Yo character concept">
-          <div class="head"></div>
-          <div class="shades"></div>
-          <div class="smile"></div>
-          <div class="jacket">YO</div>
-        </div>
+        <figure class="yo-figure">
+          <img class="yo-portrait" src="assets/yo-concierge.png" alt="Yo, the H2Yo! Concierge, holding a laptop and wearing an H2Yo! logo pullover." />
+          <figcaption class="yo-traits" aria-label="Yo brand traits">
+            <span>Committed</span>
+            <span>Cool</span>
+            <span>Confident</span>
+            <span>Cordial</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -265,6 +293,6 @@
     <a href="#campaign-builder">Build Yo Campaign</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
