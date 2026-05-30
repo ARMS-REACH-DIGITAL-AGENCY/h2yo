@@ -106,153 +106,110 @@
 }
 
 /* =========================================================
-   H2Yo layout fixes: real samples + real Yo
+   H2Yo v8 lead-capture funnel updates
    ========================================================= */
 
-/* Header logo */
-.logo-brand {
-  display: inline-flex;
-  align-items: center;
-  line-height: 0;
-}
-.logo-brand img {
-  height: 54px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-@media (max-width: 700px) {
-  .logo-brand img { height: 40px; }
+.lead-capture-section {
+  background:
+    radial-gradient(circle at top left, rgba(72,216,232,.22), transparent 34%),
+    linear-gradient(180deg,#ffffff 0%,#f4fbff 100%);
 }
 
-/* Remove the fake bottle/background treatment in the hero */
-.hero-card.hero-samples-card {
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  overflow: visible;
-}
-.hero-samples-card .mini-card {
-  max-width: 760px;
-  margin: 18px auto 0;
-}
-.sample-rotator {
-  position: relative;
-  min-height: 610px;
-  width: min(100%, 780px);
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
-}
-.sample-rotator .rotator-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  transform: none;
-  opacity: 0;
-  animation: h2yoSampleFade 12s infinite;
-}
-.sample-rotator .rotator-img:nth-child(1) { animation-delay: 0s; }
-.sample-rotator .rotator-img:nth-child(2) { animation-delay: 4s; }
-.sample-rotator .rotator-img:nth-child(3) { animation-delay: 8s; }
-
-@keyframes h2yoSampleFade {
-  0% { opacity: 0; transform: translateY(10px) scale(.985); }
-  7% { opacity: 1; transform: translateY(0) scale(1); }
-  28% { opacity: 1; transform: translateY(0) scale(1); }
-  35% { opacity: 0; transform: translateY(-8px) scale(.99); }
-  100% { opacity: 0; transform: translateY(-8px) scale(.99); }
-}
-
-@media (max-width: 1100px) {
-  .sample-rotator { min-height: 500px; }
-}
-@media (max-width: 900px) {
-  .sample-rotator { min-height: 420px; }
-}
-
-/* Hide any leftover fake bottle markup if it somehow remains */
-.mock-bottle {
-  display: none !important;
-}
-
-/* Real Yo image */
-.yo-section {
-  align-items: center;
-}
-.yo-figure {
-  margin: 0;
-  display: grid;
-  gap: 18px;
-  justify-items: center;
-}
-.yo-portrait {
-  width: min(100%, 430px);
-  max-height: 560px;
-  object-fit: contain;
-  filter: drop-shadow(0 30px 70px rgba(0,0,0,.28));
-}
-.yo-traits {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-.yo-traits span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.12);
-  border: 1px solid rgba(255,255,255,.18);
-  color: white;
-  font-weight: 800;
-  letter-spacing: .01em;
-}
-
-/* Sample gallery, if present */
-.sample-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.lead-capture-grid {
   max-width: 1180px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0,.95fr) minmax(340px,1.05fr);
+  gap: 28px;
+  align-items: stretch;
 }
-.sample-gallery article {
+
+.conversion-path,
+.lead-capture-card {
   background: white;
   border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 18px;
-  box-shadow: 0 14px 38px rgba(9,54,90,.08);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 18px 48px rgba(9,54,90,.10);
 }
-.sample-gallery img {
-  width: 100%;
-  border-radius: 18px;
-  background: #fff;
-}
-.sample-gallery h3 {
+
+.conversion-path h3,
+.lead-capture-card h3 {
   color: var(--deep);
-  font-size: 22px;
-  margin: 16px 0 8px;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  margin: 0 0 18px;
 }
-.sample-gallery p {
+
+.path-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.path-steps span {
+  display: grid;
+  place-items: center;
+  min-height: 56px;
+  border-radius: 16px;
+  background: #eef9ff;
+  color: var(--deep);
+  font-weight: 900;
+  border: 1px solid var(--line);
+}
+
+.lead-capture-card {
+  display: grid;
+  gap: 14px;
+}
+
+.lead-capture-card label {
+  display: grid;
+  gap: 7px;
+}
+
+.consent-row {
+  grid-template-columns: 22px 1fr;
+  align-items: start;
+  color: #334b5d;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.consent-row input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.form-note {
+  font-size: 13px;
   color: var(--muted);
   margin: 0;
 }
-.sample-gallery .wide-sample {
-  grid-column: 1 / -1;
+
+.lead-confirmation {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #f3fbff;
+  padding: 16px;
+  color: var(--deep);
 }
-.sample-gallery .wide-sample img {
-  max-height: 620px;
-  object-fit: contain;
+
+.hero .button.primary,
+.topbar .pill,
+footer a {
+  text-transform: none;
 }
+
 @media (max-width: 900px) {
-  .sample-gallery { grid-template-columns: 1fr; }
+  .lead-capture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .path-steps {
+    grid-template-columns: 1fr 1fr;
+  }
 }
