@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H2Yo! | Done-For-You Bottled Water Lead Capture Campaigns</title>
+  <meta name="description" content="H2Yo! turns custom bottled water into QR-powered lead-capture campaigns people actually welcome." />
+  <link rel="stylesheet" href="styles.css?v=quiz-first-1" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand logo-brand" href="#top" aria-label="H2Yo home">
+      <img src="assets/h2yo-logo.png" alt="H2Yo!" onerror="this.style.display='none'; this.parentElement.classList.add('text-logo-fallback')" />
+      <span class="fallback-logo"><span class="drop">H2</span><span class="yo">Yo!</span></span>
+    </a>
+    <nav>
+      <a href="#lead-capture">Get Concept</a>
+      <a href="#campaign-builder">Yo Score</a>
+      <a href="#examples">Examples</a>
+      <a href="#packages">Packages</a>
+    </nav>
+    <a class="pill" href="#lead-capture">Text Me My Concept</a>
+  </header>
+
+  <main id="top">
+    <section class="hero quiz-first-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Bottle → Scan → Opt-In → CRM → Follow-Up</p>
+        <h1>A bottle they accept. A message they scan. A lead you can follow up with.</h1>
+        <p class="lede">H2Yo! turns bottled water into a done-for-you lead-capture campaign people actually welcome. They scan. They smile. They opt in. You follow up.</p>
+
+        <div class="yo-process" aria-label="H2Yo process">
+          <span>Yo asks.</span>
+          <span>Yo captures.</span>
+          <span>Yo scores.</span>
+          <span>Yo recommends.</span>
+          <span>Yo designs.</span>
+          <span>Yo follows up.</span>
+        </div>
+
+        <div class="cta-row">
+          <a class="button primary" href="#lead-capture">Text Me My Campaign Concept</a>
+          <a class="button secondary" href="#campaign-builder">Preview Yo Score</a>
+        </div>
+      </div>
+
+      <aside class="lead-capture-card hero-lead-card" id="lead-capture">
+        <p class="eyebrow">You scanned the bottle</p>
+        <h2>Now let Yo show how this could work for your audience.</h2>
+        <p class="lead-card-copy">Where should Yo send your H2Yo campaign concept?</p>
+
+        <form id="leadCaptureForm">
+          <label>First name
+            <input id="leadFirstName" name="firstName" autocomplete="given-name" required placeholder="First name" />
+          </label>
+          <label>Mobile phone
+            <input id="leadPhone" name="phone" autocomplete="tel" required placeholder="Mobile number" />
+          </label>
+          <label>Email
+            <input id="leadEmail" name="email" type="email" autocomplete="email" required placeholder="Email address" />
+          </label>
+          <label>Organization
+            <input id="leadOrg" name="organization" autocomplete="organization" placeholder="Business, team, church, nonprofit, or event" />
+          </label>
+          <label class="consent-row">
+            <input id="leadConsent" name="consent" type="checkbox" required />
+            <span>Yes, text/email me my H2Yo campaign concept and follow-up details. Message and data rates may apply.</span>
+          </label>
+          <button class="button primary full" type="submit">Text Me My Campaign Concept</button>
+        </form>
+
+        <p class="form-note">This is the demo: you are experiencing the same opt-in path your own prospects, donors, members, or customers can experience.</p>
+      </aside>
+    </section>
+
+    <section class="section meta-demo">
+      <div class="section-head narrow">
+        <p class="eyebrow">You are inside the funnel</p>
+        <h2>You received a bottle. You scanned. Now Yo is guiding the next step.</h2>
+        <p>That is the product. H2Yo! connects a physical giveaway to a digital campaign designed to collect names, mobile numbers, emails, interest, and permission to follow up.</p>
+      </div>
+
+      <div class="path-steps">
+        <span>Bottle</span>
+        <span>Scan</span>
+        <span>Smile</span>
+        <span>Opt-In</span>
+        <span>CRM</span>
+        <span>Follow-Up</span>
+      </div>
+    </section>
+
+    <section class="section builder-section" id="campaign-builder">
+      <div class="section-head narrow">
+        <p class="eyebrow">Yo Campaign Score</p>
+        <h2>Answer a few questions. Yo will score your campaign and show what to build.</h2>
+        <p>Yo estimates campaign readiness, recommended quantity, scan-hook strength, likely scans, likely actions, and the best next step.</p>
+      </div>
+
+      <div class="builder">
+        <form id="campaignForm" class="wizard">
+          <div class="form-grid">
+            <label>Campaign type
+              <select id="campaignType" required>
+                <option value="booster">Team / Booster Club</option>
+                <option value="nonprofit">Nonprofit / Cause</option>
+                <option value="business">Business / Sponsor</option>
+                <option value="event">Event / Trade Show</option>
+                <option value="church">Church / Community</option>
+              </select>
+            </label>
+            <label>Audience relationship
+              <select id="audienceWarmth" required>
+                <option value="warm">Very connected</option>
+                <option value="medium">Somewhat connected</option>
+                <option value="cold">Mostly cold/new audience</option>
+              </select>
+            </label>
+            <label>Expected audience size
+              <select id="audienceSize" required>
+                <option value="250">Under 250</option>
+                <option value="500">250–500</option>
+                <option value="1000">500–1,000</option>
+                <option value="2500">1,000–2,500</option>
+                <option value="5000">2,500–5,000</option>
+                <option value="7500">5,000+</option>
+              </select>
+            </label>
+            <label>Distribution method
+              <select id="distribution" required>
+                <option value="personal">Personally handed out</option>
+                <option value="sold">Sold by volunteers/staff</option>
+                <option value="table">Placed on tables/seats</option>
+                <option value="booth">Booth or check-in table</option>
+                <option value="passive">Passive/random giveaway</option>
+              </select>
+            </label>
+            <label>Main goal
+              <select id="goal" required>
+                <option value="lead">Collect names and numbers</option>
+                <option value="donation">Raise donations</option>
+                <option value="signup">Collect memberships/signups</option>
+                <option value="awareness">Build awareness</option>
+                <option value="sales">Drive sales/appointments</option>
+              </select>
+            </label>
+            <label>Current scan hook
+              <select id="hook" required>
+                <option value="none">Not sure yet</option>
+                <option value="learn">Scan to learn more</option>
+                <option value="positive">Scan for a positive message</option>
+                <option value="win">Scan to see if you win</option>
+                <option value="offer">Scan to claim an offer</option>
+                <option value="vote">Scan to vote / participate</option>
+              </select>
+            </label>
+            <label>Story strength
+              <select id="story" required>
+                <option value="strong">Strong emotional/community story</option>
+                <option value="some">Some story</option>
+                <option value="promo">Mostly promotional</option>
+                <option value="none">Needs help</option>
+              </select>
+            </label>
+            <label>Timeline
+              <select id="timeline" required>
+                <option value="safe">More than 4 weeks</option>
+                <option value="ok">3–4 weeks</option>
+                <option value="tight">2–3 weeks</option>
+                <option value="rush">Under 2 weeks</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="wide">What are you promoting?
+            <textarea id="description" rows="4" placeholder="Example: Our charity wants a membership drive after Mass at several parishes. People get a free water, scan the QR code, watch a short mission video, and opt in for updates, donations, and membership info."></textarea>
+          </label>
+
+          <button class="button primary full" type="submit">Yo, Score My Campaign</button>
+        </form>
+
+        <aside class="results" id="results" aria-live="polite">
+          <div class="results-empty">
+            <p class="eyebrow">Example output</p>
+            <h3>Yo’s lead-capture campaign preview will appear here.</h3>
+            <p>Yo captures the contact, scores the campaign, recommends the hook, estimates bottle quantity, and shows how the lead can be followed up.</p>
+            <div class="sample-output">
+              <strong>Sample recommendation:</strong>
+              <span>2,880 bottles · “Scan to see if Yo says you win” · Prize entry + opt-in page · text/email follow-up sequence</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section blue" id="examples">
+      <div class="section-head">
+        <p class="eyebrow">Campaign examples</p>
+        <h2>Same strategy. Different audience. Same goal: capture the contact.</h2>
+      </div>
+
+      <div class="cards three">
+        <article>
+          <h3>Faith / Charity Membership Drive</h3>
+          <p>Free water after Mass. QR leads to a short mission video, donation button, membership interest form, and nurture sequence.</p>
+        </article>
+        <article>
+          <h3>Home Show / Local Business Leads</h3>
+          <p>Hand a bottle to roofers, landscapers, or vendors. QR offers a free campaign concept in exchange for name, phone, and email.</p>
+        </article>
+        <article>
+          <h3>Team / Booster Fundraiser</h3>
+          <p>Fans scan for a positive message, giveaway, or player vote, then opt in for fundraiser updates, sponsor offers, and donations.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section sample-section">
+      <div class="section-head">
+        <p class="eyebrow">Sample bottle concepts</p>
+        <h2>The bottle gets accepted. The scan starts the relationship.</h2>
+      </div>
+
+      <div class="sample-rotator" aria-label="Rotating H2Yo sample bottle designs">
+        <img class="rotator-img" src="assets/h2yo-fat-free.png" alt="H2Yo Fat Free sample bottle" />
+        <img class="rotator-img" src="assets/h2yo-sugar-free.png" alt="H2Yo Sugar Free sample bottle" />
+        <img class="rotator-img" src="assets/h2yo-gluten-free.png" alt="H2Yo Gluten Free sample bottle" />
+      </div>
+    </section>
+
+    <section class="section dark" id="yo">
+      <div class="yo-section grid-2">
+        <div>
+          <p class="eyebrow">Meet Yo</p>
+          <h2>Yo is the H2Yo! Concierge.</h2>
+          <p>Yo is committed, cool, confident, and cordial — focused on turning real-world handoffs into names, numbers, emails, and follow-up opportunities.</p>
+          <div class="quote">“Yo. You gave them water. Now let’s give them a reason to scan, opt in, and keep the conversation going.”</div>
+        </div>
+        <figure class="yo-figure">
+          <img class="yo-portrait" src="assets/yo-concierge.png" alt="Yo, the H2Yo! Concierge, holding a laptop and wearing an H2Yo! logo pullover." />
+          <figcaption class="yo-traits" aria-label="Yo brand traits">
+            <span>Committed</span>
+            <span>Cool</span>
+            <span>Confident</span>
+            <span>Cordial</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="packages">
+      <div class="section-head">
+        <p class="eyebrow">Done-for-you campaign packages</p>
+        <h2>Sell names, numbers, opt-ins, and follow-up — not cases of water.</h2>
+      </div>
+      <div class="pricing cards three">
+        <article>
+          <h3>Yo Starter Campaign</h3>
+          <p class="price">1,440 bottles</p>
+          <p>Custom label, QR code, opt-in landing page, lead capture form, and basic campaign setup.</p>
+        </article>
+        <article class="featured">
+          <h3>Yo Lead + Fundraising Campaign</h3>
+          <p class="price">2,880 bottles</p>
+          <p>Everything in Starter plus scan-hook optimization, campaign score, follow-up sequence, and sponsor/cause section.</p>
+        </article>
+        <article>
+          <h3>Yo Outreach Engine</h3>
+          <p class="price">Quarterly drops</p>
+          <p>Recurring campaigns, updated QR experiences, CRM nurturing, campaign reporting, and reorder planning.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>H2Yo!</strong>
+    <span>Bottle. Scan. Opt in. Follow up.</span>
+    <a href="#lead-capture">Text Me My Campaign Concept</a>
+  </footer>
+
+  <script src="script.js?v=quiz-first-1"></script>
+</body>
+</html>
